@@ -47,11 +47,11 @@ const sendMatchingRules = function (ctx, matchingRules) {
 bot.on(['/start', '/help'], (msg) => {
     const welcomeText = `
 Welcome!\n
-You can find a rule by id, sending:\n
+You can find a rule by id:\n
 /rule 5\n
 (send a number between 1 and 95)\n
 \n
-Or use the search, by sending: \n
+Or use the search: \n
 /rule_search socks
 \n
     `
