@@ -86,6 +86,7 @@ bot.on(/^\/rule[_-]search (.+)$/, (ctx, props) => {
       if (rules.hasOwnProperty(k)) {
         const rule = rules[k];
         console.log(rule);
+        console.log(rule.title);
         if (findInRules(rule, search_regexp)) {
           matchingRules.push(rule.index);
         }
