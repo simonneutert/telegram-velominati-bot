@@ -31,10 +31,9 @@ const ruleInRange = function (ruleId) {
 
 const sendMatchingRules = function (ctx, matchingRules) {
   for (const idx of matchingRules) {
-    const rule_object = velominati.rule(idx);
     bot.sendMessage(
       ctx.chat.id,
-      formattedRuleReply(rule_object),
+      formattedRuleReply(velominati.rule(idx)),
       {
         disable_web_page_preview: true,
         parse_mode: "MarkdownV2",
@@ -85,8 +84,7 @@ bot.on(/^\/rule[_-]search (.+)$/, (ctx, props) => {
     for (const k in rules) {
       if (rules.hasOwnProperty(k)) {
         const rule = rules[k];
-        console.log(rule);
-        console.log(rule.title);
+        console.log(k);
         if (findInRules(rule, search_regexp)) {
           matchingRules.push(k);
         }
