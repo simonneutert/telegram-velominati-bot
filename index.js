@@ -34,7 +34,7 @@ const sendMatchingRules = function (ctx, matchingRules) {
     const rule_object = velominati.rule(idx);
     bot.sendMessage(
       ctx.chat.id,
-      formattedRuleReply(rule_object.rule),
+      formattedRuleReply(rule_object),
       {
         disable_web_page_preview: true,
         parse_mode: "MarkdownV2",
@@ -68,7 +68,7 @@ bot.on(velominatiRulesRegexp, (ctx) => {
 
     bot.sendMessage(
       ctx.chat.id,
-      formattedRuleReply(rule_object.rule),
+      formattedRuleReply(rule_object),
       {
         disable_web_page_preview: true,
         parse_mode: "MarkdownV2",
@@ -82,12 +82,14 @@ bot.on(/^\/rule[_-]search (.+)$/, (ctx, props) => {
   if (text.length <= 20) {
     const search_regexp = new RegExp(`${text}`, "gi");
     const matchingRules = [];
-    rules.forEach((rule_object) => {
-      const rule = rule_object.rule;
-      if (findInRules(rule, search_regexp)) {
-        matchingRules.push(rule.index);
+    for (const k in rules) {
+      if (rules.hasOwnProperty(k)) {
+        const rule = rules[k];
+        if (findInRules(rule, search_regexp)) {
+          matchingRules.push(rule.index);
+        }
       }
-    });
+    }
     sendMatchingRules(ctx, matchingRules);
   }
 });

@@ -324,9 +324,9 @@ uuid@^3.3.2:
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
 velominati-js@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/velominati-js/-/velominati-js-1.0.6.tgz#8f28af09c63b19a8a6588d991158f4664c63ff1a"
-  integrity sha512-lmHq9FEfwqUEUAXQ4lQMMOJNbmjZE2S/HP5xvEGm34qkJTz51n5Hd5J+gkFulXq8TEuGr9v7f/N4bR6U9p0kqQ==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/velominati-js/-/velominati-js-1.1.0.tgz#150b3499f1b7db64fce423b99c02c57b10e32d84"
+  integrity sha512-Xsecv/kAXIbY3y0E5O0F6QufvP/kMtywaDEjHygn1gqneeckbeit54VWcPA7e8AsFLQa+gFbqlQpkIdGn68TEw==
 
 verror@1.10.0:
   version "1.10.0"
